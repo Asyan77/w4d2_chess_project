@@ -3,11 +3,12 @@
 class Piece
     def initialize(color, board, pos)
         @color = color
-      
-        @pos = []
+        @board = board
+        @pos = pos
     end
 
     def to_s
+        " #{symbol} "
     end
 
     def empty?
@@ -19,7 +20,8 @@ class Piece
     def pos=(val)
     end
 
-    def Symbol
+    def symbol
+        'p'
     end
 
     private
@@ -37,5 +39,3 @@ class Piece
 
 end
 
-
-rook = Piece.new(:b)
